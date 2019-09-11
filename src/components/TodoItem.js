@@ -15,8 +15,13 @@ function TodoItem(props) {
   return (
     <div style={getStyle()}>
       <p>
-        <input type="checkbox" onChange={props.markComplete.bind(this, id)} />{" "}
-        {title}
+        <label>
+          <input type="checkbox" onChange={props.markComplete.bind(this, id)} />{" "}
+          {title}
+        </label>
+        <button style={btnStyle} onClick={props.delTodo.bind(this, id)}>
+          x
+        </button>
       </p>
     </div>
   );
@@ -24,6 +29,15 @@ function TodoItem(props) {
 
 TodoItem.propTypes = {
   todo: propTypes.object.isRequired
+};
+const btnStyle = {
+  background: "#ff0000",
+  color: "#fff",
+  border: "none",
+  padding: "5px 9px",
+  borderRadius: "50%",
+  cursor: "pointer",
+  float: "right"
 };
 
 export default TodoItem;
