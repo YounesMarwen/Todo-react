@@ -1,11 +1,10 @@
 {
   "name": "todoapp",
-  "homepage": "https://github.com/YounesMarwen/Todo-react",
+  "homepage": "https://younesmarwen.github.io/Todo-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
-    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
@@ -33,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }

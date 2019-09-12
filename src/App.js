@@ -4,7 +4,7 @@ import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
 import About from "./components/pages/About";
-//import axios from "axios";
+import axios from "axios";
 
 import "./App.css";
 
@@ -13,7 +13,7 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "call your boss",
+      title: "Here is an example of todo",
       completed: false
     },
     {
@@ -25,19 +25,19 @@ function App() {
 
   //get all todos list
   useEffect(() => {
-    const todosList = todos;
-    setTodos(todosList);
-    // // async function fetchData() {
-    // //   await axios
-    // //     .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-    // //     .then(res => {
-    // //       const todosList = res.data;
-    // //       setTodos(todosList);
-    // //     });
-    // }
+    // const todosList = todos;
+    // setTodos(todosList);
+    async function fetchData() {
+      await axios
+        .get("https://jsonplaceholder.typicode.com/todos?_limit=3")
+        .then(res => {
+          const todosList = res.data;
+          setTodos(todosList);
+        });
+    }
 
-    // fetchData();
-  });
+    fetchData();
+  }, []);
 
   //mark TODO as complete
   const markComplete = id => {
@@ -66,7 +66,10 @@ function App() {
   //Add new TODO
   const addTodo = title => {
     // add +1 to the last id of todos list
-    let newId = todos[todos.length - 1].id + 1;
+    let newId = 0;
+    if (todos.length > 0) {
+      newId = todos[todos.length - 1].id + 1;
+    }
 
     // create the last added object
     const newTodo = {
@@ -90,7 +93,7 @@ function App() {
     //   });
   };
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
         <Route

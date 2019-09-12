@@ -25,6 +25,7 @@ function AddTodo(props) {
         style={{ flex: "10", padding: "5px" }}
         value={newTodo.title}
         onChange={onChange}
+        required
       />
       <input
         type="submit"
