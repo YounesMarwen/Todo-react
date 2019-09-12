@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/YounesMarwen/Todo-react/static/css/main.f44e8e9b.chunk.css",
-    "main.js": "/YounesMarwen/Todo-react/static/js/main.4fded6cd.chunk.js",
-    "main.js.map": "/YounesMarwen/Todo-react/static/js/main.4fded6cd.chunk.js.map",
+    "main.js": "/YounesMarwen/Todo-react/static/js/main.1e12e1eb.chunk.js",
+    "main.js.map": "/YounesMarwen/Todo-react/static/js/main.1e12e1eb.chunk.js.map",
     "runtime~main.js": "/YounesMarwen/Todo-react/static/js/runtime~main.25d44e51.js",
     "runtime~main.js.map": "/YounesMarwen/Todo-react/static/js/runtime~main.25d44e51.js.map",
-    "static/js/2.4ab7a279.chunk.js": "/YounesMarwen/Todo-react/static/js/2.4ab7a279.chunk.js",
-    "static/js/2.4ab7a279.chunk.js.map": "/YounesMarwen/Todo-react/static/js/2.4ab7a279.chunk.js.map",
+    "static/js/2.a1e66610.chunk.js": "/YounesMarwen/Todo-react/static/js/2.a1e66610.chunk.js",
+    "static/js/2.a1e66610.chunk.js.map": "/YounesMarwen/Todo-react/static/js/2.a1e66610.chunk.js.map",
     "index.html": "/YounesMarwen/Todo-react/index.html",
-    "precache-manifest.9af9ca0ad7fa36fc1be60148d530ae7a.js": "/YounesMarwen/Todo-react/precache-manifest.9af9ca0ad7fa36fc1be60148d530ae7a.js",
+    "precache-manifest.4c4af231e61944088b8b835b1abf584a.js": "/YounesMarwen/Todo-react/precache-manifest.4c4af231e61944088b8b835b1abf584a.js",
     "service-worker.js": "/YounesMarwen/Todo-react/service-worker.js",
     "static/css/main.f44e8e9b.chunk.css.map": "/YounesMarwen/Todo-react/static/css/main.f44e8e9b.chunk.css.map"
   }

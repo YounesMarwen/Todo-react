@@ -4,7 +4,7 @@ import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
 import About from "./components/pages/About";
-import axios from "axios";
+//import axios from "axios";
 
 import "./App.css";
 
@@ -37,7 +37,7 @@ function App() {
     // }
 
     // fetchData();
-  }, []);
+  });
 
   //mark TODO as complete
   const markComplete = id => {
