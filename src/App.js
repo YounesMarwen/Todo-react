@@ -10,19 +10,33 @@ import "./App.css";
 
 function App() {
   // const [todos, setTodos] = useState([
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "call your boss",
+      completed: false
+    },
+    {
+      id: 2,
+      title: "meeting at 12pm",
+      completed: false
+    }
+  ]);
+
   //get all todos list
   useEffect(() => {
-    async function fetchData() {
-      await axios
-        .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-        .then(res => {
-          const todosList = res.data;
-          setTodos(todosList);
-        });
-    }
+    const todosList = todos;
+    setTodos(todosList);
+    // // async function fetchData() {
+    // //   await axios
+    // //     .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    // //     .then(res => {
+    // //       const todosList = res.data;
+    // //       setTodos(todosList);
+    // //     });
+    // }
 
-    fetchData();
+    // fetchData();
   }, []);
 
   //mark TODO as complete
@@ -38,42 +52,42 @@ function App() {
 
   //delete TODO
   const delTodo = id => {
-    // const todoToDel = [...todos.filter(todo => todo.id !== id)];
-    // setTodos(todoToDel);
+    const todoToDel = [...todos.filter(todo => todo.id !== id)];
+    setTodos(todoToDel);
 
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then(res => {
-        const todoToDel = [...todos.filter(todo => todo.id !== id)];
-        setTodos(todoToDel);
-      });
+    // axios
+    //   .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    //   .then(res => {
+    //     const todoToDel = [...todos.filter(todo => todo.id !== id)];
+    //     setTodos(todoToDel);
+    //   });
   };
 
   //Add new TODO
   const addTodo = title => {
     // add +1 to the last id of todos list
-    // let newId = todos[todos.length - 1].id + 1;
+    let newId = todos[todos.length - 1].id + 1;
 
     // create the last added object
-    // const newTodo = {
-    //   id: newId,
-    //   title: title,
-    //   completed: false
-    // };
+    const newTodo = {
+      id: newId,
+      title: title,
+      completed: false
+    };
     // adding the added object to todos list
-    // const newTodos = [...todos, newTodo];
-    //setting the new value of todos
-    // setTodos(newTodos);
+    const newTodos = [...todos, newTodo];
+    // setting the new value of todos
+    setTodos(newTodos);
 
-    axios
-      .post("https://jsonplaceholder.typicode.com/todos", {
-        title: title,
-        completed: false
-      })
-      .then(res => {
-        const newTodos = [...todos, res.data];
-        setTodos(newTodos);
-      });
+    // axios
+    //   .post("https://jsonplaceholder.typicode.com/todos", {
+    //     title: title,
+    //     completed: false
+    //   })
+    //   .then(res => {
+    //     const newTodos = [...todos, res.data];
+    //     setTodos(newTodos);
+    //   });
   };
   return (
     <Router>
